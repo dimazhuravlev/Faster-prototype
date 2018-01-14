@@ -177,6 +177,8 @@ header {
   height: 40px;
   width: 620px;
   padding: 8px;
+  padding-left: 16px;
+  box-sizing: border-box;
   font-size: inherit;
 }
 
@@ -330,9 +332,21 @@ img {
 }
 
 .card_description {
+  display: flex;
+  align-items: center;
   font-size: .85em;
   line-height: 1em;
   color: #888;
+}
+
+.card_description::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #888;
+  margin-right: 6px;
 }
 
 .card_price {
@@ -410,14 +424,44 @@ tr {
 
 .card_preview_apteka {
 	  flex: none;
-      width: 200px;
-      height: 200px;
-      border: 1px solid #C1C1C1;
-      border-radius: 4px;
-      padding: 12px;
-      margin-right: 16px;
-      box-sizing: border-box;
-      cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #C1C1C1;
+    border-radius: 4px;
+    padding: 12px;
+    margin-right: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.card_description_apteka {
+  font-size: .85em;
+  line-height: 1em;
+  color: #888;
+}
+
+.card_description_metro {
+  display: flex;
+  align-items: center;
+  font-size: .85em;
+  line-height: 1em;
+  color: #888;
+}
+
+.card_description_metro::before {
+  content: "м";
+  font-size: .8em;
+  line-height: 1.1em;
+  padding: 0px 2px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #888;
+  margin-right: 6px;
+
 }
 
 .card_all_apteka {
