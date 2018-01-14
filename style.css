@@ -1,0 +1,501 @@
+body {
+  margin: 0px;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 400;
+  letter-spacing: .025em;
+  font-family: 'Helvetica', sans-serif;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: #666;
+  height: 64px;
+  width: 100%;
+}
+
+.product {
+  display: block;
+  height: calc(100vh - 64px);
+  position: absolute;
+  top: 64px;
+  width: 45%; /*ширина блока описания продукта*/
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 24px 32px;
+}
+
+.product_block {
+  width: 100%;
+  border-radius: 4px;
+  margin: 32px auto;
+}
+
+.product_block_scroll-x {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.card_preview {
+  flex: none;
+  width: 240px;
+  height: 300px;
+  border: 1px solid #C1C1C1;
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.list {
+  display: block;
+  background-color: #444;
+  height: calc(100vh - 128px);
+  position: absolute;
+  top: 128px;
+  left: 45%;
+  width: 20%; /*ширина блока аптек*/
+  overflow-y: scroll;
+  padding: 8px 16px 16px 16px;
+  box-sizing: border-box;
+}
+
+.list_block {
+  width: 100%;
+  border-bottom: 1px solid #666;
+  margin: 0px auto;
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.list_block:hover {
+  background-color: #555;
+}
+
+.map {
+  display: block;
+  background-color: #333;
+  height: calc(100vh - 128px);
+  position: absolute;
+  top: 128px;
+  right: 0px;
+  width: 35%; /*ширина карты*/
+  overflow-y: scroll;
+}
+
+.map_block {
+  width: 100%;
+  height: calc(100vh - 64px);
+  border: none;
+}
+
+.header_apteka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  height: 64px;
+  position: fixed;
+  top: 64px;
+  right: 0px;
+  width: 55%; /*ширина хедера блока аптек*/
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+.header_apteka_title {
+	display: block;
+	color: #fff;
+	margin-right: 40px;
+}
+
+.header_apteka_filter {
+	display: block;
+	font-size: .85em;
+	background-color: #999;
+	border-radius: 4px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 4px 12px;
+	box-sizing: border-box;
+	height: 28px;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+.header_filters {
+  display: flex;
+  align-items: center;
+}
+
+.header_apteka_slider {
+  margin-right: 4px;
+}
+
+.slider_value {
+  font-size: .85em;
+  color: #fff;
+}
+
+.slider_ruble {
+  font-size: .85em;
+  color: #fff;
+  margin-right: 32px;
+}
+
+.header_apteka_filter:hover {
+   background-color: #777;
+}
+
+.logo {
+  display: block;
+  margin: auto 24px;
+  font-size: 1.9em;
+  font-weight: bold;
+  line-height: 1.9em;
+  letter-spacing: -.01em;
+  color: #fff;
+}
+
+.search {
+  display: block;
+  margin-right: 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  height: 40px;
+  width: 620px;
+  padding: 8px;
+  font-size: inherit;
+}
+
+nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  margin: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header_nav::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 6px;
+}
+
+.apteka_name {
+  font-size: .85em;
+  line-height: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.apteka_address {
+  font-size: .85em;
+  line-height: 1.2em;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.apteka_price {
+  font-size: 1.4em;
+  line-height: 1.3em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.apteka_balance {
+  font-size: .85em;
+  line-height: 1em;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 400;
+  margin-bottom: 12px;
+  margin-top: 32px;
+}
+
+p {
+  font-size: .85em;
+  line-height: 1.4;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.change_title {
+  margin: 64px 0px 0px 0px;
+}
+
+.btn {
+  height: 40px;
+  padding: 0px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  font-size: 1.2em;
+  color: #fff;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:hover,
+.btn:checked {
+  background-color: #222;
+}
+
+.product_description {
+  display: flex;
+  margin-top: 24px;
+}
+
+.product_description_name {
+  margin-right: 24px;
+  color: #888;
+}
+
+.product_price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.product_header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product_title {
+  flex: none;
+  width: 50%;
+}
+
+.product_image {
+  flex: none;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+
+.img_small {
+  display: block;
+  width: 65%;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+.card_title {
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.card_description {
+  font-size: .85em;
+  line-height: 1em;
+  color: #888;
+}
+
+.card_price {
+  font-size: 1.4em;
+  line-height: 1.3em;
+  margin-top: 16px;
+}
+
+.card_balance {
+  font-size: .85em;
+  line-height: 1.2em;
+  color: #888;
+}
+
+.btn_plus {
+  display: block;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  font-size: 1em;
+  line-height: 1.9em;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  background-color: #333;
+  margin-right: 8px;
+}
+
+.flex_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.show_more {
+  display: block;
+  float: right;
+  margin-bottom: 40px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr td:last-child {
+  float: right;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+
+td {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+tr {
+  border-bottom: 1px solid #C1C1C1;
+  border-top: 1px solid #C1C1C1;
+}
+
+.instruction {
+  max-width: 600px;
+  margin-top: 8px;
+}
+
+.hidden_apteki,
+.hidden_title_apteki {
+	display: none;
+}
+
+.card_preview_apteka {
+	  flex: none;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #C1C1C1;
+      border-radius: 4px;
+      padding: 12px;
+      margin-right: 16px;
+      box-sizing: border-box;
+      cursor: pointer;
+}
+
+.card_all_apteka {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid #C1C1C1;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.fixed_bar_mobile {
+	display: none;
+}
+
+.product_price_fixed {
+  display: none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+	.product {width: 100%; padding: 16px 16px;}
+	.product_image img {width: 70%; display: block; margin: 0px auto;}
+    .list {display: none;}
+    .map {display: none;}
+    .header_apteka {display: none;}
+    .header_nav {display: none;}
+    .hidden_apteki {display: flex; margin-bottom: 56px; }
+    .hidden_title_apteki {display: inline;}
+    .product_price {display: none;}
+    .fixed_bar_mobile {display: block;
+                       padding-top: 12px;
+                       box-sizing: border-box;
+                       position: fixed;
+                       z-index: 100;
+                       bottom: 0px;
+                       background-color: #999;
+                       height: 64px;
+                       width: 100%;}
+    .product_price_fixed {
+                       display: flex;
+                       flex-wrap: wrap;
+                       justify-content: space-between;
+                       align-items: center;
+                       margin: auto 16px;}
+    .product .show_more:last-child {margin-bottom: 72px;}
+}
+
+@media only screen and (max-width: 1370px) {
+	  .apteka_name {font-size: .7em;}
+    .apteka_address {font-size: .7em;}
+    .apteka_price {font-size: 1.1em;}
+    .apteka_balance {font-size: .7em;}
+    .product_header {flex-direction: column;}
+    .product_title {width: 100%;}
+    .product_image {width: 100%; margin-bottom: 24px; order: -1;}
+    h1 {font-size: 1.4em;}
+	  h2 {font-size: 1em;}
+	  td {font-size: .85em;}
+}
+
+@media only screen and (max-width: 1240px) {
+	.card_preview {width: 180px; height: 280px;}
+}
+
+@media only screen and (max-width: 1520px) {
+     .header_apteka_filter {display: none;}
+     .header_apteka_slider {display: none;}
+     .slider_value {display: none;}
+     .slider_ruble {display: none;}
+}

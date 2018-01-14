@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Faster</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <span class="logo">Faster</span>
+    <input class="search" type="text" name="search" placeholder="Поиск">
+    <nav>
+      <span class="header_nav">Москва</span>
+      <span class="header_nav">Аптеки</span>
+      <span class="header_nav">Корзина</span>
+    </nav>
+
+    <section class="header_apteka">
+    <h1 class="header_apteka_title">Есть в 64 аптеках</h1>
+      <div class="header_filters">
+        <input name="slider" class="header_apteka_slider" type="range" min="180" max="272" step="1" value="272" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+        <span class="slider_value" id="rangeValue">272</span>
+        <span class="slider_ruble">&thinsp;&#8381;</span>
+        <p class="header_apteka_filter">Круглосуточно</p>
+        <p class="header_apteka_filter">Открыто сейчас</p>
+      </div>
+  </section>
+  </header>
+
+  <section class="product">
+
+<div class="product_block product_header">
+  <div class="product_title">
+    <div class="product_name">
+      <h1>Нурофен</h1>
+    </div>
+    <div class="product_description">
+        <div class="product_description_name">
+          <p>Активное вещество</p>
+          <p>Производитель</p>
+          <p>Форма выпуска</p>
+          <p>Фасовка</p>
+          <p>Дозировка</p>
+        </div>
+        <div class="product_description_value">
+          <p>Ибупрофен</p>
+          <p>Рекитт Бензикер</p>
+          <p>Суспензия</p>
+          <p>150 мл</p>
+          <p>150 мг/5 мл</p>
+        </div>
+    </div>
+  </div>
+    <div class="product_image">
+      <img src="img/nurofen.jpg">
+    </div>
+</div>
+
+    <div class="product_block product_price">
+      <h1>от 180&thinsp;&#8381;</h1>
+      <button class="btn" type="submit">Добавить в список</button>
+    </div>
+
+
+    <h1 class="hidden_title_apteki">Есть в 63 аптеках</h1>
+    <!-- <button class="btn hidden_title_apteki" type="submit" style="height: 32px; font-size: .85em;">
+    Аптеки на карте
+    </button> -->
+    <div class="hidden_apteki product_block_scroll-x">
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Первая помощь</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">180&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 8 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Озерки</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">186&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 12 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Невис</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">189&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 5 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Радуга</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">195&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 3 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Первая помощь</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">208&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 1 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_preview_apteka">
+        <p class="card_title">Первая помощь</p>
+        <p class="card_description">ул. Ефремова,&thinsp;37 корп.&nbsp;2</p>
+        <p class="card_description">м. Смоленская</p>
+        <p class="card_description">с 8:00 до 23:00</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">239&thinsp;&#8381;</p>
+            <p class="card_balance">В наличии 8 шт.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_all_apteka">
+        <span>Все аптеки &#62;</span>
+      </div>
+
+    </div>
+
+
+    <h1>Другие формы, фасовки и дозировки</h1>
+    <div class="product_block_scroll-x">
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_analog.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_2.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_3.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_4.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_analog.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_2.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_3.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_analog.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+      <div class="card_preview">
+        <img class="img_small" src="img/nurofen_3.jpg">
+        <p class="card_title">Нурофен Форте</p>
+        <p class="card_description">Капсулы</p>
+        <p class="card_description">10 шт.</p>
+        <p class="card_description">400 мг</p>
+        <div class="flex_card">
+          <div>
+            <p class="card_price">от 207&thinsp;&#8381;</p>
+            <p class="card_balance">Есть в 273 аптеках</p>
+          </div>
+          <div class="btn_plus">+</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="show_more">Смотреть все &#62;</p>
+
+    <div class="product_block">
+      <h1 class="change_title">Чем заменить Нурофен</h1>
+      <h2>С одинаковым активным веществом</h2>
+
+      <table>
+        <tr>
+          <td>Некст</td>
+          <td>от 73&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Спазган</td>
+          <td>от 35&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Кетопрофен</td>
+          <td>от 175&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Ибупрофен</td>
+          <td>от 27&thinsp;&#8381;</td>
+        </tr>
+      </table>
+
+      <h2>С одинаковым действием</h2>
+
+      <table>
+        <tr>
+          <td>Анальгин</td>
+          <td>от 73&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Ношпа</td>
+          <td>от 35&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Аспирин</td>
+          <td>от 175&thinsp;&#8381;</td>
+        </tr>
+        <tr>
+          <td>Ибупрофен</td>
+          <td>от 27&thinsp;&#8381;</td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="product_block">
+      <h1>Описание</h1>
+      <p class="instruction">Нурофен - пестероидный противовоспалительный препарат (НПВП). Оказывает направленное действие против боли, обладает жаропонижающим и противовоспалительным свойствами. Механизм действия ибупрофена обусловлен торможением синтеза простагландинов медиаторов боли, воспаления и гипертермической реакции.</p>
+    </div>
+    <div class="product_block">
+      <h1>Показания</h1>
+      <p class="instruction">С осторожностью назначают при язвенной болезни желудка и двенадцатиперстной кишки в анамнезе, гастритах, энтеритах, колитах, кровотечениях из ЖКТ в анамнезе, при сопутствующих заболеваниях печени и/или почек, хронической сердечной недостаточности, заболеваниях крови неясной этиологии, бронхиальной астме, крапивнице, рините, полипах слизистой оболочки носа, гипербилирубинемии.
+      При необходимости определения 17-кетостероидов препарат следует отменить за 48 ч до исследования.Пациента необходимо проинформировать о том, что при появлении побочных эффектов следует прекратить прием препарата и обратиться к врачу.Не рекомендуется одновременный прием шипучих таблеток Нурофен с ацетилсалициловой кислотой и другими НПВС.
+      На фоне применения препарата не рекомендуется употребление алкоголя.</p>
+    </div>
+    <div class="product_block">
+      <h1>Применение и дозы</h1>
+      <p class="instruction">Для взрослых и детей старше 12 лет начальная доза препарата составляет 200 мг 3-4 раза/сут. Для достижения быстрого клинического эффекта возможно увеличение начальной дозы до 400 мг 3 раза/сут. Максимальная суточная доза - 1200 мг. Таблетки, покрытые оболочкой, следует запивать водой. Детям 6–12 лет (с массой тела более 20 кг) — по 1 табл. не более 4 раз в день.</p>
+    </div>
+    <p class="show_more">Полная инструкция &#62;</p>
+  </section>
+
+  <section class="list">
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">180&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Радуга</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">185&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Озерки</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">189&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Асна</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">197&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Университетская аптека</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">205&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Хорошая аптека</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">218&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Невис</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">227&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">239&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">250&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">262&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">271&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">274&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">274&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">275&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">278&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+    <div class="list_block">
+      <div class="apteka_name">Первая помощь</div>
+      <div class="apteka_address">ул. Ефремова,&thinsp;37 корп.&nbsp;2</div>
+      <div class="apteka_price">289&thinsp;&#8381;</div>
+      <div class="apteka_balance">в наличие 16 шт.</div>
+    </div>
+  </section>
+
+  <section class="map">
+    <iframe class="map_block" src="https://yandex.ru/map-widget/v1/-/CBapBWUExD"></iframe>
+  </section>
+
+  <section class="fixed_bar_mobile">
+    <div class="product_price_fixed">
+      <h1>от 180&thinsp;&#8381;</h1>
+      <button class="btn" type="submit">Добавить в список</button>
+    </div>
+  </section>
+
+</body>
+</html>
