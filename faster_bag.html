@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <link href="style_bag.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Faster - корзина</title>
+    <link href="style_bag.css" rel="stylesheet">
 </head>
 
 <body>
@@ -7,20 +11,20 @@
     <span class="logo">Faster</span>
     <input class="search" type="text" name="search" placeholder="Поиск">
     <nav>
-      <span class="header_nav">Москва</span>
-      <span class="header_nav">Аптеки</span>
-      <span class="header_nav">Корзина</span>
+      <span class="header_nav nav_apteki">Аптеки</span>
+      <span class="header_nav nav_likes">Отложенные</span>
+      <span class="header_nav nav_bag">Корзина</span>
     </nav>
 
     <section class="header_apteka">
     <h1 class="header_apteka_title">Выберите аптеку</h1>
-      <div class="header_filters">
-        <input name="slider" class="header_apteka_slider" type="range" min="180" max="272" step="1" value="272" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
-        <span class="slider_value" id="rangeValue">272</span>
-        <span class="slider_ruble">&thinsp;&#8381;</span>
-        <p class="header_apteka_filter">Круглосуточно</p>
-        <p class="header_apteka_filter">Открыто сейчас</p>
-      </div>
+    <div class="header_filters">
+      <input name="slider" class="header_apteka_slider" type="range" min="180" max="272" step="1" value="272" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+      <span class="slider_value" id="rangeValue">272</span>
+      <span class="slider_ruble">&thinsp;&#8381;</span>
+      <p class="header_apteka_filter">Круглосуточно</p>
+      <p class="header_apteka_filter">Открыто сейчас</p>
+    </div>
   </section>
   </header>
 
@@ -114,62 +118,58 @@
 
   <section class="bag">
     <h1>Корзина</h1>
+    <div class="line"></div>
 
     <div class="item_bag">
-      <img class="item_img" src="img/nurofen.jpg">
+      <img class="item_img" src="./img/nurofen.jpg">
       <div class="item_name">
-         <p class="item_title">Нурофен Нео</p>
+         <a href="./index.html"><p class="item_title">Нурофен Нео</p></a>
          <p class="item_description">Капсулы</p>
          <p class="item_description">10 шт.</p>
          <p class="item_description">400 мг</p>
       </div>
-      <div class="item_value">— 1 +</div>
+      <div class="item_value">– 1 +</div>
       <div class="item_price">от 84&thinsp;&#8381;</div>
-      <div class="item_delete">x</div>
+      <img class="item_delete" src="./img/close_icon.svg">
     </div>
 
     <div class="item_bag">
-      <img class="item_img" src="img/nurofen.jpg">
+      <img class="item_img" src="./img/nurofen_4.jpg">
       <div class="item_name">
-         <p class="item_title">Нурофен Нео</p>
+         <a href="./index.html"><p class="item_title">Нурофен Нео</p></a>
+         <p class="item_description">Таблетки</p>
+         <p class="item_description">10 шт.</p>
+         <p class="item_description">400 мг</p>
+      </div>
+      <div class="item_value">– 1 +</div>
+      <div class="item_price">от 84&thinsp;&#8381;</div>
+      <img class="item_delete" src="./img/close_icon.svg">
+    </div>
+
+    <div class="item_bag">
+      <img class="item_img" src="./img/nurofen_2.jpg">
+      <div class="item_name">
+         <a href="./index.html"><p class="item_title">Нурофен Нео</p></a>
+         <p class="item_description">Суппозитории</p>
+         <p class="item_description">200 мл</p>
+         <p class="item_description">400 мг</p>
+      </div>
+      <div class="item_value">– 1 +</div>
+      <div class="item_price">от 84&thinsp;&#8381;</div>
+      <img class="item_delete" src="./img/close_icon.svg">
+    </div>
+
+    <div class="item_bag">
+      <img class="item_img" src="./img/nurofen_3.jpg">
+      <div class="item_name">
+         <a href="./index.html"><p class="item_title">Нурофен Нео</p></a>
          <p class="item_description">Капсулы</p>
          <p class="item_description">10 шт.</p>
          <p class="item_description">400 мг</p>
       </div>
-      <div class="item_value">— 1 +</div>
+      <div class="item_value">– 1 +</div>
       <div class="item_price">от 84&thinsp;&#8381;</div>
-      <div class="item_delete">x</div>
-    </div>
-
-    <div class="item_bag">
-      <img class="item_img" src="img/nurofen.jpg">
-      <div class="item_name">
-         <p class="item_title">Нурофен Нео</p>
-         <p class="item_description">Капсулы</p>
-         <p class="item_description">10 шт.</p>
-         <p class="item_description">400 мг</p>
-      </div>
-      <div class="item_value">— 1 +</div>
-      <div class="item_price">от 84&thinsp;&#8381;</div>
-      <div class="item_delete">x</div>
-    </div>
-
-    <div class="item_bag">
-      <img class="item_img" src="img/nurofen.jpg">
-      <div class="item_name">
-         <p class="item_title">Нурофен Нео</p>
-         <p class="item_description">Капсулы</p>
-         <p class="item_description">10 шт.</p>
-         <p class="item_description">400 мг</p>
-      </div>
-      <div class="item_value">— 1 +</div>
-      <div class="item_price">от 84&thinsp;&#8381;</div>
-      <div class="item_delete">x</div>
-    </div>
-
-    <div class="total_price">
-      <h1>Общая сумма 1347&thinsp;&#8381;</h1>
-      <button class="btn" type="submit">Забронировать</button>
+      <img class="item_delete" src="./img/close_icon.svg">
     </div>
 
   </section>
@@ -177,9 +177,9 @@
 
   <section class="fixed_bar_mobile">
     <div class="product_price_fixed">
-      <h1>Сумма 1347&thinsp;&#8381;</h1>
-      <button class="btn_fix" type="submit">Забронировать</button>
+      <button class="btn_fix" type="submit">Выбрать аптеку</button>
     </div>
   </section>
 
 </body>
+</html>

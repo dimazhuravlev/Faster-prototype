@@ -3,9 +3,10 @@ body {
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 400;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   font-family: 'Helvetica', sans-serif;
   color: #111;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
   left: 0px;
   width: 20%; /*ширина блока аптек*/
   overflow-y: scroll;
-  padding: 8px 16px 16px 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
 }
 
@@ -83,15 +84,15 @@ header {
 
 .header_apteka_filter {
 	display: block;
-	font-size: .85em;
+	font-size: .7em;
 	background-color: #999;
 	border-radius: 4px;
 	text-align: center;
 	vertical-align: middle;
-	padding: 4px 12px;
+	padding: 4px 8px;
 	box-sizing: border-box;
-	height: 28px;
-	margin-right: 16px;
+	height: 24px;
+	margin-right: 12px;
 	cursor: pointer;
 }
 
@@ -121,7 +122,7 @@ header {
 
 .logo {
   display: block;
-  margin: auto 24px;
+  margin: auto 8px auto 24px;
   font-size: 1.9em;
   font-weight: bold;
   line-height: 1.9em;
@@ -132,12 +133,15 @@ header {
 .search {
   display: block;
   margin-right: 24px;
+  margin-left: 16px;
   border: none;
   border-radius: 4px;
   background-color: #fff;
   height: 40px;
   width: 620px;
   padding: 8px;
+  padding-left: 16px;
+  box-sizing: border-box;
   font-size: inherit;
 }
 
@@ -150,18 +154,43 @@ nav {
 .header_nav {
   display: flex;
   align-items: center;
-  margin: 24px;
+  margin: 16px;
   color: #fff;
   cursor: pointer;
+  font-size: .9em;
+  line-height: 1em;
 }
 
-.header_nav::before {
+.nav_apteki::before {
   content: "";
+  background-image: url('./img/apteka_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #fff;
+  width: 29px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.nav_likes::before {
+  content: "";
+  background-image: url('./img/like_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+.nav_bag::before {
+  content: "";
+  background-image: url('./img/bag_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 20px;
+  height: 29px;
   margin-right: 6px;
 }
 
@@ -192,6 +221,7 @@ h1 {
   line-height: 1.5em;
   font-weight: 400;
   margin: 0px;
+  margin-right: 8px;
 }
 
 h2 {
@@ -221,7 +251,6 @@ p {
   background-color: #333;
   font-size: 1.4em;
   color: #fff;
-  margin-left: 24px;
   cursor: pointer;
 }
 
@@ -268,9 +297,9 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   border-bottom: 1px solid #C1C1C1;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   box-sizing: border-box;
 }
 
@@ -278,6 +307,11 @@ p {
   display: block;
   width: 15%;
   margin-right: 16px;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
 }
 
 .item_name {
@@ -307,33 +341,54 @@ p {
 }
 
 .item_price {
-  font-size: 1.4em;
-  line-height: 1.3em;
+  font-size: 1.2em;
+  line-height: 1.1em;
   margin-right: 24px;
 }
 
-.item_delete {
-  font-size: 1em;
-  line-height: 1.2em;
-  margin-bottom: 64px;
-}
-
-.total_price {
+.price_block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
+.price_description {
+  margin-bottom: -4px;
+  font-size: .85em;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid #C1C1C1;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
 
 
 
+@media only screen and (max-width: 1440px) {
+    .header_apteka {flex-direction: column;
+                    align-items: flex-start;
+                    height: 104px;}
+    .list, .map {top: 168px;}
+    .apteka_name {font-size: .7em;}
+    .apteka_address {font-size: .7em;}
+    .apteka_price {font-size: 1.1em;}
+    .item_title {font-size: .85em;
+                 margin-bottom: 8px;}
+    .item_description {font-size: .7em;}
+    .item_price {font-size: .85em;}
+    h1 {font-size: 1.4em;}
+    h2 {font-size: 1em;}
+    td {font-size: .85em;}
+}
 
 @media only screen and (max-width: 1024px) {
     .list {display: none;}
     .map {display: none;}
     .header_apteka {display: none;}
-    .header_nav {display: none;}
+    .nav_apteki, .nav_likes {display: none;}
     .hidden_apteki {display: flex; margin-bottom: 56px; }
     .hidden_title_apteki {display: inline;}
     .fixed_bar_mobile {display: block;
@@ -348,23 +403,27 @@ p {
     .product_price_fixed {
                        display: flex;
                        flex-wrap: wrap;
-                       justify-content: space-between;
+                       justify-content: flex-end;
                        align-items: center;
                        margin: auto 16px;}
+    .bag {left: 0px;
+          width: 100%;
+          padding: 16px;}
+    .item_title {font-size: 1em;
+                 margin-bottom: 12px;}
+    .item_description {font-size: .85em;}
+    .item_price {font-size: 1.2em;}
 }
 
-@media only screen and (max-width: 1370px) {
-	  .apteka_name {font-size: .7em;}
-    .apteka_address {font-size: .7em;}
-    .apteka_price {font-size: 1.1em;}
-    h1 {font-size: 1.4em;}
-	  h2 {font-size: 1em;}
-	  td {font-size: .85em;}
+@media only screen and (max-width: 768px) {
+    .item_title {font-size: .85em;
+                 margin-bottom: 8px;}
+    .item_description {font-size: .7em;}
+    .item_price {font-size: .85em;}
+    .item_value {font-size: .85em;}
+    .item_name {max-width: 100px;}
 }
 
-@media only screen and (max-width: 1520px) {
-     .header_apteka_filter {display: none;}
-     .header_apteka_slider {display: none;}
-     .slider_value {display: none;}
-     .slider_ruble {display: none;}
+@media only screen and (max-width: 500px) {
+  .logo {display: none;}
 }

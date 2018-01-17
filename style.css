@@ -3,7 +3,7 @@ body {
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 400;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   font-family: 'Helvetica', sans-serif;
   color: #111;
   -webkit-font-smoothing: antialiased;
@@ -66,7 +66,7 @@ header {
   left: 45%;
   width: 20%; /*ширина блока аптек*/
   overflow-y: scroll;
-  padding: 8px 16px 16px 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
 }
 
@@ -121,17 +121,17 @@ header {
 }
 
 .header_apteka_filter {
-	display: block;
-	font-size: .85em;
-	background-color: #999;
-	border-radius: 4px;
-	text-align: center;
-	vertical-align: middle;
-	padding: 4px 12px;
-	box-sizing: border-box;
-	height: 28px;
-	margin-right: 16px;
-	cursor: pointer;
+  display: block;
+  font-size: .7em;
+  background-color: #999;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  height: 24px;
+  margin-right: 12px;
+  cursor: pointer;
 }
 
 .header_filters {
@@ -160,7 +160,7 @@ header {
 
 .logo {
   display: block;
-  margin: auto 24px;
+  margin: auto 8px auto 24px;
   font-size: 1.9em;
   font-weight: bold;
   line-height: 1.9em;
@@ -171,6 +171,7 @@ header {
 .search {
   display: block;
   margin-right: 24px;
+  margin-left: 16px;
   border: none;
   border-radius: 4px;
   background-color: #fff;
@@ -191,18 +192,43 @@ nav {
 .header_nav {
   display: flex;
   align-items: center;
-  margin: 24px;
+  margin: 16px;
   color: #fff;
   cursor: pointer;
+  font-size: .9em;
+  line-height: 1em;
 }
 
-.header_nav::before {
+.nav_apteki::before {
   content: "";
+  background-image: url('./img/apteka_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #fff;
+  width: 29px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.nav_likes::before {
+  content: "";
+  background-image: url('./img/like_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+.nav_bag::before {
+  content: "";
+  background-image: url('./img/bag_icon.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 20px;
+  height: 29px;
   margin-right: 6px;
 }
 
@@ -255,6 +281,10 @@ p {
   line-height: 1.4;
   margin-top: 0px;
   margin-bottom: 6px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .change_title {
@@ -490,7 +520,26 @@ tr {
 
 
 
+@media only screen and (max-width: 1440px) {
+    .header_apteka {flex-direction: column;
+                    align-items: flex-start;
+                    height: 104px;}
+    .list, .map {top: 168px;}
+    .apteka_name {font-size: .7em;}
+    .apteka_address {font-size: .7em;}
+    .apteka_price {font-size: 1.1em;}
+    .apteka_balance {font-size: .7em;}
+    .product_header {flex-direction: column;}
+    .product_title {width: 100%;}
+    .product_image {width: 100%; margin-bottom: 24px; order: -1;}
+    h1 {font-size: 1.4em;}
+    h2 {font-size: 1em;}
+    td {font-size: .85em;}
+}
 
+@media only screen and (max-width: 1240px) {
+  .card_preview {width: 180px; height: 280px;}
+}
 
 @media only screen and (max-width: 1024px) {
 	.product {width: 100%; padding: 16px 16px;}
@@ -498,7 +547,7 @@ tr {
     .list {display: none;}
     .map {display: none;}
     .header_apteka {display: none;}
-    .header_nav {display: none;}
+    .nav_apteki, .nav_likes {display: none;}
     .hidden_apteki {display: flex; margin-bottom: 56px; }
     .hidden_title_apteki {display: inline;}
     .product_price {display: none;}
@@ -520,26 +569,6 @@ tr {
     .product .show_more:last-child {margin-bottom: 72px;}
 }
 
-@media only screen and (max-width: 1370px) {
-	  .apteka_name {font-size: .7em;}
-    .apteka_address {font-size: .7em;}
-    .apteka_price {font-size: 1.1em;}
-    .apteka_balance {font-size: .7em;}
-    .product_header {flex-direction: column;}
-    .product_title {width: 100%;}
-    .product_image {width: 100%; margin-bottom: 24px; order: -1;}
-    h1 {font-size: 1.4em;}
-	  h2 {font-size: 1em;}
-	  td {font-size: .85em;}
-}
-
-@media only screen and (max-width: 1240px) {
-	.card_preview {width: 180px; height: 280px;}
-}
-
-@media only screen and (max-width: 1520px) {
-     .header_apteka_filter {display: none;}
-     .header_apteka_slider {display: none;}
-     .slider_value {display: none;}
-     .slider_ruble {display: none;}
+@media only screen and (max-width: 500px) {
+  .logo {display: none;}
 }
